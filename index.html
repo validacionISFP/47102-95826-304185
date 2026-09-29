@@ -1,166 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Validación de certificados - Fredy Anel Perez Diaz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background-color: #f4f4f4;
-    }
+<meta charset="UTF-8">
+<title>Validar Diplomado - BERENICE BAUTISTA DEL REY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    .page-container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #ffffff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      border-radius: 10px;
-      overflow: hidden;
-    }
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,Helvetica,sans-serif;
+}
 
-    .top-banner {
-      background-color: #6b0f1a;
-      padding: 18px 20px;
-      text-align: center;
-    }
+body{
+  background:#f2f2f2;
+}
 
-    .top-banner h1 {
-      margin: 0;
-      color: #ffffff;
-      font-size: 30px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
+.overlay{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
 
-    .content {
-      padding: 25px;
-    }
+.modal{
+  background:#fff;
+  border-radius:4px;
+  max-width:1200px;
+  width:100%;
+  box-shadow:0 4px 12px rgba(0,0,0,.25);
+  overflow:hidden;
+}
 
-    .subtitle {
-      text-align: center;
-      color: #374151;
-      margin-top: 0;
-      margin-bottom: 25px;
-      font-size: 16px;
-      line-height: 1.5;
-    }
+.modal-header{
+  background:#8b1c1f;
+  color:#fff;
+  padding:14px 24px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
 
-    .status-badge {
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 999px;
-      background-color: #16a34a;
-      color: #ffffff;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
+.modal-header img{
+  height:38px;
+}
 
-    .info-section {
-      margin-bottom: 25px;
-      color: #111827;
-      font-size: 15px;
-    }
+.modal-header h1{
+  font-size:24px;
+  font-weight:700;
+  letter-spacing:1px;
+}
 
-    .info-row {
-      margin-bottom: 8px;
-    }
+.modal-body{
+  padding:20px 24px;
+  display:flex;
+  gap:20px;
+}
 
-    .info-label {
-      font-weight: 600;
-      color: #374151;
-    }
+.info-column{
+  flex:1;
+}
 
-    .info-value {
-      color: #111827;
-    }
+.images-column{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  align-items:center;
+}
 
-    .certificate-preview {
-      margin-top: 25px;
-      text-align: center;
-    }
+.info-row{
+  display:flex;
+  border:1px solid #e0e0e0;
+  border-bottom:none;
+}
 
-    .certificate-preview h2 {
-      font-size: 18px;
-      color: #374151;
-      margin-bottom: 12px;
-    }
+.info-row:last-child{
+  border-bottom:1px solid #e0e0e0;
+}
 
-    .certificate-preview img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
+.label{
+  background:#f7f7f7;
+  font-weight:700;
+  padding:8px 10px;
+  width:40%;
+  border-right:1px solid #e0e0e0;
+}
 
-    .footer-note {
-      margin-top: 25px;
-      font-size: 12px;
-      color: #6b7280;
-      text-align: center;
-    }
-  </style>
+.value{
+  padding:8px 10px;
+  width:60%;
+}
+
+.cert-img{
+  width:100%;
+  max-width:520px;
+  border:1px solid #ddd;
+}
+
+@media(max-width:900px){
+  .modal-body{
+    flex-direction:column;
+  }
+}
+</style>
 </head>
+
 <body>
 
-  <div class="page-container">
+<div class="overlay">
 
-    <div class="top-banner">
-      <h1>Validación de certificados</h1>
-    </div>
+<div class="modal">
 
-    <div class="content">
+<div class="modal-header">
+<img src="logo.png" alt="Logo">
+<h1>VALIDAR DIPLOMA</h1>
+</div>
 
-      <p class="subtitle">
-        Los siguientes datos corresponden al registro del
-        <strong>Diplomado “Innovación Pedagógica en la Formación Docente”</strong>.
-      </p>
+<div class="modal-body">
 
-      <div style="text-align:center;">
-        <span class="status-badge">Estatus: VÁLIDO</span>
-      </div>
+<div class="info-column">
 
-      <div class="info-section">
-        <div class="info-row">
-          <span class="info-label">Nombre completo: </span>
-          <span class="info-value">FREDY ANEL PEREZ DIAZ</span>
-        </div>
+<div class="info-row">
+<div class="label">Situación:</div>
+<div class="value">REGULAR</div>
+</div>
 
-        <div class="info-row">
-          <span class="info-label">CURP: </span>
-          <span class="info-value">PEDF780702HCSRZR02</span>
-        </div>
+<div class="info-row">
+<div class="label">Alumno:</div>
+<div class="value">BERENICE BAUTISTA DEL REY</div>
+</div>
 
-        <div class="info-row">
-          <span class="info-label">Diplomado: </span>
-          <span class="info-value">INNOVACIÓN PEDAGÓGICA EN LA FORMACIÓN DOCENTE</span>
-        </div>
+<div class="info-row">
+<div class="label">Documento:</div>
+<div class="value">03</div>
+</div>
 
-        <div class="info-row">
-          <span class="info-label">Fecha: </span>
-          <span class="info-value">27/09/2026</span>
-        </div>
+<div class="info-row">
+<div class="label">Matrícula:</div>
+<div class="value">952407</div>
+</div>
 
-        <div class="info-row">
-          <span class="info-label">Folio: </span>
-          <span class="info-value">57343288</span>
-        </div>
-      </div>
+<div class="info-row">
+<div class="label">Categoría:</div>
+<div class="value">Educación</div>
+</div>
 
-      <div class="certificate-preview">
-        <h2>Vista del certificado</h2>
-        <img src="constancia.jpg" alt="Constancia">
-      </div>
+<div class="info-row">
+<div class="label">Diplomado:</div>
+<div class="value">ATENCIÓN A LA DIVERSIDAD E INCLUSIÓN EDUCATIVA</div>
+</div>
 
-      <p class="footer-note">
-        Documento digital para consulta y validación.
-      </p>
+<div class="info-row">
+<div class="label">Inicio:</div>
+<div class="value">27/06/2026</div>
+</div>
 
-    </div>
-  </div>
+<div class="info-row">
+<div class="label">Término:</div>
+<div class="value">28/09/2026</div>
+</div>
+
+<div class="info-row">
+<div class="label">Carga Horaria:</div>
+<div class="value">200 Horas</div>
+</div>
+
+<div class="info-row">
+<div class="label">Registro N°:</div>
+<div class="value">47102-95826-304185</div>
+</div>
+
+</div>
+
+<div class="images-column">
+
+<img class="cert-img" src="frente.jpg" alt="Frente del diploma">
+
+<img class="cert-img" src="atras.jpg" alt="Reverso del diploma">
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
